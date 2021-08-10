@@ -3,6 +3,7 @@ body {
   border: 0;
   padding: 0;
   background-color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
 }
 
 .screen {
@@ -10,5 +11,20 @@ body {
   width: 100vw;
   background-image: url("img/table.png");
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.game {
+  height: 80vh;
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: #ffd700;
+  font-size: 3em;
 }
 /*# sourceMappingURL=index.css.map */
