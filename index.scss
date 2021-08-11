@@ -3,11 +3,13 @@ body{
     border: 0;
     padding: 0;
     background-color: #fff;
+    color: #ffd700;
+    fontsize: 1.1em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
 }
 .screen{
-    height:100vh;
-    width:100vw;
+    min-height:100vh;
+    min-width:100vw;
     background-image: url("img/table.png");
     background-size: cover;
     display: flex;
@@ -23,4 +25,51 @@ body{
 .title{
     color: #ffd700;
     font-size: 3em;
+    margin-bottom: 10px;;
+}
+
+.card-title{
+    display: block;
+    margin: 10px 0;
+    font-size:1.1em;
+}
+
+.cards-box{
+    height: 50vh;
+}
+
+.card{
+    height: 40vh;
+    margin: 15px;
+}
+
+.sum{
+    font-size: 1.8em;
+}
+
+.info{
+    margin: 15px;
+}
+
+.buttons{
+    text-transform: uppercase;
+    background-color: #ffd700;
+    border: none;
+    color: #000;
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 10px;
+    border-radius: 15px;
+}
+
+.buttons:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.buttons:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
 }

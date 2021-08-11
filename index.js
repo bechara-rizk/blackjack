@@ -8,3 +8,9 @@ function randomNb(start,end){
     return nb;
 }
 
+function test(){
+    console.log("test");
+}
+
+/* let hit=document.getElementById("hit");
+hit.disabled=true; */
