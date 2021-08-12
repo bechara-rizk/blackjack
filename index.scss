@@ -2,16 +2,18 @@ body{
     margin: 0;
     border: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #006D31;
     color: #ffd700;
     font-size: 1.1em;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    overflow-y: scroll;
 }
 .screen{
     min-height:100vh;
     min-width:100vw;
-    background-image: url("img/table.png");
+    height: auto;
+    //background-image: url("img/table.png");
     background-size: cover;
     display: flex;
 }
@@ -25,7 +27,7 @@ body{
 
 .title{
     color: #ffd700;
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 10px;;
 }
 
@@ -36,12 +38,19 @@ body{
 }
 
 .cards-box{
-    height: 50vh;
+    height: 40vh;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .card{
-    height: 40vh;
+    height: 30vh;
     margin: 15px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
 }
 
 .sum{
@@ -49,7 +58,7 @@ body{
 }
 
 .info{
-    margin: 15px;
+    margin: 10px;
 }
 
 .buttons{
@@ -62,7 +71,7 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 1em;
-    margin: 0 10px;
+    margin: 10px 10px;
     border-radius: 15px;
 }
 
@@ -73,4 +82,8 @@ body{
 .buttons:disabled{
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.commands{
+
 }
