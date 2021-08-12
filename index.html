@@ -15,20 +15,21 @@
             </div>
             <div class="cards">
                 <span class="card-title">Your Cards:</span>
-                <div class="cards-box">
-                    <img class="card" src="img/Flat Playing Cards Set/Clubs/A.png" alt="">
+                <div class="cards-box" id="cards-box">
+                    <!-- <img class="card" src="img/Flat Playing Cards Set/Clubs/A.png" alt="">
                     <img class="card" src="img/Flat Playing Cards Set/Clubs/3.png" alt="">
-                    <img class="card" src="img/Flat Playing Cards Set/Clubs/q.png" alt="">
+                    <img class="card" src="img/Flat Playing Cards Set/Clubs/Q.png" alt=""> -->
+
                 </div>
             </div>
             <div class="info">
-                <span class="sum" id="">Sum: </span>
+                <span class="sum" id="sum">Sum: </span>
             </div>
             <div class="commands">
-                <button class="buttons " id="new-game">new game</button>
-                <button disabled class="buttons" id="hit" onclick="test()">HIT</button>
-                <button disabled class="buttons " id="stand">STAND</button>
-                <button disabled class="buttons " id="split">split</button>
+                <button class="buttons " id="new-game" onclick="newGame()">new game</button>
+                <button class="buttons" id="hit" onclick="hit()">HIT</button>
+                <button class="buttons " id="stand" onclick="stand()">STAND</button>
+                <button class="buttons " id="split">split</button>
             </div>
         </div>
     </div>
