@@ -141,7 +141,7 @@ function createDeck() {
         }
     }
     
-    console.log(numberOfDecks)
+    //console.log(numberOfDecks)
 }
 createDeck()
 // console.log(deck[4])
