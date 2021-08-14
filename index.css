@@ -7,7 +7,6 @@ body {
   font-size: 1.1em;
   font-weight: bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-  overflow-y: scroll;
 }
 
 .screen {
@@ -43,6 +42,7 @@ body {
   height: 40vh;
   overflow: auto;
   white-space: nowrap;
+  direction: rtl;
 }
 
 .card {
@@ -77,6 +77,11 @@ body {
   border-radius: 15px;
 }
 
+.button-input {
+  min-width: 150px;
+  width: 10vw;
+}
+
 .buttons:hover {
   -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -85,5 +90,31 @@ body {
 .buttons:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.split-wrap {
+  display: none;
+  height: 40vh;
+  /* overflow: auto;
+    white-space: nowrap;
+    direction: rtl; */
+}
+
+.hand {
+  display: inline;
+  border: solid 5px blue;
+}
+
+/* .split-title{
+    display: inline;
+    position: relative;
+    top: 0;
+    left: 0;
+} */
+.split-cards {
+  display: inline;
+  position: relative;
+  bottom: 0;
+  right: 0;
 }
 /*# sourceMappingURL=index.css.map */

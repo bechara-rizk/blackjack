@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     border: 0;
     padding: 0;
@@ -7,43 +7,45 @@ body{
     font-size: 1.1em;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    overflow-y: scroll;
+    //overflow-y: scroll;
 }
-.screen{
-    min-height:100vh;
-    min-width:100vw;
+
+.screen {
+    min-height: 100vh;
+    min-width: 100vw;
     height: auto;
     //background-image: url("img/table.png");
     background-size: cover;
     display: flex;
 }
 
-.game{
-    height:80vh;
-    width:80vw;
+.game {
+    height: 80vh;
+    width: 80vw;
     margin: auto;
     text-align: center;
 }
 
-.title{
+.title {
     color: #ffd700;
     font-size: 2em;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
 }
 
-.card-title{
+.card-title {
     display: block;
     margin: 10px 0;
-    font-size:1.1em;
+    font-size: 1.1em;
 }
 
-.cards-box{
+.cards-box {
     height: 40vh;
     overflow: auto;
     white-space: nowrap;
+    direction: rtl;
 }
 
-.card{
+.card {
     height: 30vh;
     margin: 15px;
     display: inline-block;
@@ -53,15 +55,15 @@ body{
     text-decoration: none;
 }
 
-.sum{
+.sum {
     font-size: 1.8em;
 }
 
-.info{
+.info {
     margin: 10px;
 }
 
-.buttons{
+.buttons {
     text-transform: uppercase;
     background-color: #ffd700;
     border: none;
@@ -73,17 +75,50 @@ body{
     font-size: 1em;
     margin: 10px 10px;
     border-radius: 15px;
+    //width: auto;
 }
 
-.buttons:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.button-input{
+    min-width: 150px;
+    width: 10vw;
 }
 
-.buttons:disabled{
+.buttons:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buttons:disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
 
-.commands{
+.commands {
 
+}
+
+.split-wrap {
+    display: none;
+    height: 40vh;
+    /* overflow: auto;
+    white-space: nowrap;
+    direction: rtl; */
+}
+
+.hand{
+    display: inline;
+    border: solid 5px blue;
+}
+
+/* .split-title{
+    display: inline;
+    position: relative;
+    top: 0;
+    left: 0;
+} */
+
+.split-cards{
+    display: inline;
+    position: relative;
+    bottom: 0;
+    right: 0;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <script data-ad-client="ca-pub-6366306511053565" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
+
 <body>
     <div class="screen">
         <div class="game">
@@ -22,6 +24,24 @@
                     <img class="card" src="img/Flat Playing Cards Set/Clubs/Q.png" alt=""> -->
 
                 </div>
+                <div class="split-wrap" id="split-wrap">
+                    <div class="hand" id="hand-1">
+                        <div class="split-title">
+                            HAND 1
+                        </div>
+                        <div class="split-cards">
+                            <img class="card" src="img/Flat Playing Cards Set/Clubs/3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="hand" id="hand-2">
+                        <div class="split-title">
+                            HAND 2
+                        </div>
+                        <div class="split-cards">
+                            <img class="card" src="img/Flat Playing Cards Set/Clubs/Q.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="info">
                 <span class="sum" id="sum">Sum: </span>
@@ -30,10 +50,13 @@
                 <button class="buttons " id="new-game" onclick="newGame()">new game</button>
                 <button class="buttons" id="hit" onclick="hit()">HIT</button>
                 <button class="buttons " id="stand" onclick="stand()">STAND</button>
-                <button class="buttons " id="split">split</button>
+                <button class="buttons " id="split" onclick="split()">Split</button>
+                <button class="buttons " id="resetDeck" onclick="createDeck()">reset deck</button>
+                <input class="buttons button-input" type="number" placeholder="# of decks" min="0" oninput="changeDeckHTML()" id="deckHTML"></input>
             </div>
         </div>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
