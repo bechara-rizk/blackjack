@@ -7,6 +7,7 @@ body {
   font-size: 1.1em;
   font-weight: bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+  text-transform: capitalize;
 }
 
 .screen {
@@ -93,28 +94,11 @@ body {
 }
 
 .split-wrap {
-  display: none;
-  height: 40vh;
-  /* overflow: auto;
-    white-space: nowrap;
-    direction: rtl; */
+  display: -ms-grid;
+  display: grid;
 }
 
-.hand {
-  display: inline;
-  border: solid 5px blue;
-}
-
-/* .split-title{
-    display: inline;
-    position: relative;
-    top: 0;
-    left: 0;
-} */
-.split-cards {
-  display: inline;
-  position: relative;
-  bottom: 0;
-  right: 0;
+.split-title {
+  font-size: 1.9em;
 }
 /*# sourceMappingURL=index.css.map */

@@ -8,6 +8,7 @@ body {
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     //overflow-y: scroll;
+    text-transform: capitalize;
 }
 
 .screen {
@@ -97,28 +98,17 @@ body {
 }
 
 .split-wrap {
-    display: none;
-    height: 40vh;
-    /* overflow: auto;
-    white-space: nowrap;
-    direction: rtl; */
+    display: grid;
 }
 
 .hand{
-    display: inline;
-    border: solid 5px blue;
+
 }
 
-/* .split-title{
-    display: inline;
-    position: relative;
-    top: 0;
-    left: 0;
-} */
+.split-title{
+    font-size: 1.9em;
+}
 
 .split-cards{
-    display: inline;
-    position: relative;
-    bottom: 0;
-    right: 0;
+
 }
