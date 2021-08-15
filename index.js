@@ -19,7 +19,7 @@ let numberOfDecks = 2;
 let hands = 0;
 let splitDone = false;
 let dealerTurn = false;
-let dealerSum=0;
+let dealerSum = 0;
 let playerSum = 0;
 disButtons()
 document.getElementById("cards-box").style.display = "block";
@@ -35,6 +35,7 @@ function newGame() {
     document.getElementById("cards-box").style.display = "block";
     document.getElementById("split-wrap").style.display = "none";
     document.getElementById("cards-box").innerHTML = "";
+    document.getElementById("dealer").innerHTML = "Dealer's Score:"
     for (let i = 0; i < 2; i++) {
         hit();
     }
@@ -43,12 +44,11 @@ function newGame() {
     if (false /* cards[0]===cards[1] */ ) {
         document.getElementById("split").disabled = false;
     }
-    document.getElementById("dealer").innerHTML="Dealer's Score:"
 }
 
 function split() {
     console.log("split");
-    splitDone=true;
+    splitDone = true;
     document.getElementById("cards-box").style.display = "none";
     document.getElementById("split-wrap").style.display = "grid";
     document.getElementById("sum").style.display = "none";
@@ -56,8 +56,7 @@ function split() {
         for (let i = 0; i < 2; i++) {
             addHand();
         }
-    }
-    else{
+    } else {
         addHand();
     }
 }
@@ -98,7 +97,7 @@ function renderGame() {
     if (sum > 21) {
         disButtons();
         document.getElementById("sum").innerHTML += " - You have busted! Tough luck.";
-        document.getElementById("dealer").innerHTML="You Lost, The Dealer Doesn't Have To Play."
+        document.getElementById("dealer").innerHTML = "You Lost, The Dealer Doesn't Have To Play."
     }
     if (sum === 21) {
         document.getElementById("sum").innerHTML += " - You have got Blackjack!";
@@ -109,36 +108,34 @@ function renderGame() {
 
 function stand() {
     disButtons()
-    playerSum=sum;
-    if (splitDone===false){
-        dealerTurn=true;
+    playerSum = sum;
+    if (splitDone === false) {
+        dealerTurn = true;
         dealerPlay();
     }
 }
 
-function dealerPlay(){
-    dealerSum=0;
+function dealerPlay() {
+    dealerSum = 0;
     //console.log("dealer play");
-    while (dealerSum<17){
+    while (dealerSum < 17) {
         hit();
         //console.log(dealerSum);
     }
-    document.getElementById("dealer").innerHTML="Dealer's Score: "+ dealerSum;
-    console.log(dealerSum, sum);
-    if (dealerSum>21){
-        document.getElementById("dealer").innerHTML+=" The Dealer Has Busted. You Win!"
+    //console.log("Dealer's Score: " + dealerSum);
+    document.getElementById("dealer").innerHTML = "Dealer's Score: " + dealerSum;
+    //console.log(dealerSum, sum);
+    if (dealerSum > 21) {
+        document.getElementById("dealer").innerHTML += " The Dealer Has Busted. You Win!"
+    } else if (dealerSum > playerSum) {
+        document.getElementById("dealer").innerHTML += " The dealer won!"
+    } else if (dealerSum < playerSum) {
+        document.getElementById("dealer").innerHTML += " You won!"
+    } else if (dealerSum === playerSum) {
+        document.getElementById("dealer").innerHTML += " It is a tie!"
     }
-    else if (dealerSum>playerSum){
-        document.getElementById("dealer").innerHTML+=" The dealer won!"
-    }
-    else if (dealerSum<playerSum){
-        document.getElementById("dealer").innerHTML+=" You won!"
-    }
-    else if (dealerSum===playerSum){
-        document.getElementById("dealer").innerHTML+=" It is a tie!"
-    }
-    dealerSum=0;
-    dealerTurn=false;
+    //dealerSum = 0;
+    dealerTurn = false;
 }
 
 function hit() {
@@ -167,12 +164,11 @@ function hit() {
     cards.push(randomCard);
     cards.push(currentSuit);
     //console.log(deck)
-    if (dealerTurn===false){
+    if (dealerTurn === false) {
         sum += randomCardValue;
         renderGame();
-    }
-    else{
-        dealerSum+=randomCardValue;
+    } else {
+        dealerSum += randomCardValue;
     }
     if (deck.length <= numberOfDecks * 52 * 0.3) {
         createDeck();
