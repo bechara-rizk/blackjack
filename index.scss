@@ -93,16 +93,17 @@ body {
     cursor: not-allowed;
 }
 
-.commands {}
+//.commands {}
 
 .split-wrap {
-    display: grid;
+    display: none;
+    overflow: auto;
 }
 
-.hand {}
+//.hand {}
 
 .split-title {
     font-size: 1.9em;
 }
 
-.split-cards {}
+//.split-cards {}

@@ -94,8 +94,8 @@ body {
 }
 
 .split-wrap {
-  display: -ms-grid;
-  display: grid;
+  display: none;
+  overflow: auto;
 }
 
 .split-title {
