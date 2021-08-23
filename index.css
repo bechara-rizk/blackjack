@@ -41,9 +41,10 @@ body {
 
 .cards-box {
   height: 40vh;
-  overflow: auto;
+  overflow-x: auto;
   white-space: nowrap;
   direction: rtl;
+  overflow-y: clip;
 }
 
 .card {
@@ -100,5 +101,9 @@ body {
 
 .split-title {
   font-size: 1.9em;
+}
+
+.split-cards {
+  direction: rtl;
 }
 /*# sourceMappingURL=index.css.map */
